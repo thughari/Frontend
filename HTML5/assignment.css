@@ -3,55 +3,55 @@
     background-position: center;
     background-size: cover;}
     
-    #header img{width: 100px;height: 100px;
-        margin-left: 25%;
-        display: flex;}
+#header img{width: 100px;height: 100px;
+    margin-left: 25%;
+    display: flex;}
+
+#header h1{text-align: center;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Grande';
+    font-size: 250%;
+    letter-spacing: 5px;
+    color: orangered;
+    margin-top: -75px;
+    justify-content: center;}
     
-    #header h1{text-align: center;
-        text-transform: uppercase;
-        font-family: 'Lucida Sans', 'Lucida Grande';
-        font-size: 250%;
-        letter-spacing: 5px;
-        color: orangered;
-        margin-top: -75px;
-        justify-content: center;}
-        
-    img{border-radius: 10%;}
+img{border-radius: 10%;}
+
+#outbox{
+    padding: 250px 2px;
+    background-color:skyblue;
+}
+
+#inbox{
     
-    #outbox{
-        padding: 250px 2px;
-        background-color:skyblue;
-    }
+    background-color: aquamarine;
+    padding: 5px;
+    transform: scaleY(45);
+    margin-top: 5%;
+    display: flex;
+}
+#nav{
+    float: left;
+    list-style-type: none;
+    margin-top: -250px;
+    margin-left: 300px;
+}
+#nav li{
+    align-items: center;
+    display: inline-block;
+}
+#nav li a{
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    border: 1px solid orange;
+    background-color: orange;
+}
+#nav li a:hover{
+    padding: 10px 40px;
+    background-color: white;
+    color: orange;
+    transition: all 0.3s;
+}
     
-    #inbox{
-        
-        background-color: aquamarine;
-        padding: 5px;
-        transform: scaleY(45);
-        margin-top: 5%;
-        display: flex;
-    }
-    #nav{
-        float: left;
-        list-style-type: none;
-        margin-top: -250px;
-        margin-left: 300px;
-    }
-    #nav li{
-        align-items: center;
-        display: inline-block;
-    }
-    #nav li a{
-        text-decoration: none;
-        color: white;
-        padding: 5px 20px;
-        border: 1px solid orange;
-        background-color: orange;
-    }
-    #nav li a:hover{
-        padding: 10px 40px;
-        background-color: white;
-        color: orange;
-        transition: all 0.3s;
-    }
-     
