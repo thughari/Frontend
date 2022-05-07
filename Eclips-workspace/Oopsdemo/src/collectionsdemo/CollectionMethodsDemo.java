@@ -11,6 +11,7 @@ of type Collection.
 public class CollectionMethodsDemo {
 
 	
+	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 		// Create a list of strings
 		ArrayList<String> al = new ArrayList<String>(5);
