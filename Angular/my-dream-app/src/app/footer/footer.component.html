@@ -16,5 +16,19 @@
 <h1 [style.color]="color">I am a Footer Component</h1>
 <p [innerHTML]="nameDetails" [style.font-size]="fontSize"></p>
 
+<p [innerHTML]="college" [style.color]="color"></p>
+
+<hr>
+<h1>Event Binding</h1>
+<p>This data binding type is when information flows from the view to the component 
+    when an event is triggered. The view sends the data from an event like the 
+    click of a button to be used to update the component. It is the exact 
+    opposite of property binding, where the data goes from the component to the
+     view.
+</p>
+ 
+<h4>My Name is {{name}}</h4>
+
+<button (click)="updateName()">Update Name</button>
 <hr>
 </div>

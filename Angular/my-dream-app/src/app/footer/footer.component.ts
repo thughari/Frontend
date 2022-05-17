@@ -18,9 +18,14 @@ export class FooterComponent implements OnInit {
  
   name='Peter';
   a ='right';
+  college="St Ann's college of engineering and technology";
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  updateName(){
+    this.name='John Edward';
+  }
 }
