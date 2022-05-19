@@ -1,1 +1,155 @@
-<p>about works!</p>
+<div id="about">
+    <h1>Angular Directive</h1>
+    <p>
+        The Angular directive helps us to 
+        manipulate the DOM. You can change the appearance, 
+        behavior, or layout of a DOM element using 
+        the Directives.They help you to extend HTML
+    </p>
+    <br>
+    <p>There are three kinds of directives in Angular:</p>
+     
+    <ul>
+    <li>Component Directive</li>
+    <li>Structural directives</li>
+    <li>Attribute directives</li>
+    </ul>
+    <br>
+    
+    <h2>Component Directive</h2>
+    <p>
+        The Component is the main building block of an Angular Application.
+        The Component contains the data & user interaction logic that defines 
+        how the View looks and behaves. A view in Angular refers to a template (HTML).
+        The Angular Components are plain JavaScript classes and defined using 
+        @Component Decorator. This Decorator provides the component with the View to display & Metadata about the Component
+    </p>
+    <h4>Components are special directives in Angular. 
+        They are the directive with a template (view)
+    </h4>
+    
+        <br>
+        <h2>Structural Directives</h2>
+       
+        <h4>Structural directives can change the DOM layout by adding and removing DOM elements.
+             All structural Directives are preceded by Asterix symbol.</h4>
+    <br>
+    <h3>ngFor</h3>
+    <br>
+    <p>The ngFor is an Angular structural directive, which repeats a portion of the HTML 
+        template once per each item from an iterable list (Collection).
+    </p>
+    <br>
+
+    <div *ngFor="let i of items; let m=index">
+        <ul>
+            <li>{{i}} - {{m}}</li>
+        </ul>
+    </div>
+
+    <br>
+    <hr>
+    <div *ngFor="let j of qty">
+        <ul>
+            <li>{{j}}</li>
+        </ul>
+    </div>
+    <hr>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--using ngFor for each Row-->
+            <tr *ngFor="let student of STUDENTS">
+                <td>{{student.name | uppercase }}</td>
+                <td>{{student.age}}</td>
+                <td>{{student.marks }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+   <hr>
+
+   <h1>{{title}}</h1>
+    <ul>
+        <li *ngFor="let m of movie">
+            {{ m.title}} - {{m.director}}
+        </li>
+    </ul>
+
+    <hr>
+
+    <div class='panel panel-primary'>
+        <div class='panel-heading'>
+            {{title}}
+        </div>
+     
+        <div class='panel-body'>
+            <div class='table-responsive'>
+                <table class='table'>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Director</th>
+                            <th>Cast</th>
+                            <th>Release Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let movie of movie;">
+                            <td>{{movie.title}}</td>
+                            <td>{{movie.director}}</td>
+                            <td>{{movie.cast}}</td>
+                            <td>{{movie.releaseDate | date:'d/MMM/y'}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class='card'>
+        <div class='card-header'>
+          <p>Nested Array</p>
+        </div>
+       
+        <div class='table-responsive'>
+          <table class='table table-bordered table-sm '>
+            <thead class="thead-dark">
+              <tr>
+                <th>Name</th>
+                <th>Mail ID</th>
+                <th>Skills</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let employee of employees;">
+                <td>{{employee.name}}</td>
+                <td>{{employee.email}}</td>
+                <td>
+                  <table class='table table-sm '>
+                    <tbody>
+                      <tr *ngFor="let skill of employee.skills;">
+                        <td>{{skill.skill}}</td>
+                        <td>{{skill.exp}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+       
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+       
+      <hr>
+
+</div>
