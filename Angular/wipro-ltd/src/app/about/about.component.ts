@@ -44,7 +44,7 @@ export class AboutComponent implements OnInit {
       ]
     },
     {
-      name: "Lakshmna", email: "lakshman@gmail.com",
+      name: "Lakshmn", email: "lakshman@gmail.com",
       skills: [{ skill: 'HTML', exp: '2' },{ skill: 'CSS', exp: '2' },{ skill: 'Javascript', exp: '1' }
       ]
     }
