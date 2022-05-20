@@ -50,9 +50,68 @@ export class AboutComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  title1:string="ngIf Demo";
+  showMe:boolean | any;
+ 
+  num:number=0;
+ 
+  serverID: number = 10;  
+  serverStatus: string = 'Offline';  
+ 
+  color:string='red';
+
+  people: any[] = [
+    {
+      "name": "Douglas  Pace",
+      "country": 'UK'
+    },
+    {
+      "name": "Mcleod  Mueller",
+      "country": 'USA'
+    },
+    {
+      "name": "Day  Meyers",
+      "country": 'HK'
+    },
+    {
+      "name": "Aguirre  Ellis",
+      "country": 'UK'
+    },
+    {
+      "name": "Cook  Tyson",
+      "country": 'USA'
+    }
+  ];
+ 
+  city:string="Bangalore";
+
+  constructor() { 
+    this.serverStatus = Math.random() > 0.5 ? 'Online' : 'Offline';
+  }
 
   ngOnInit(): void {
+  }
+
+  getServerStatus() {  
+    return this.serverStatus;  
+    }  
+ 
+  getColor() {  // === strict equality comparision operator, which returns false
+                // for the values which are not of a similar type
+    return this.serverStatus === 'Online' ? 'green' : 'red';  
+  }  
+ 
+  getColor1(country:string):string { 
+    switch (country) {
+      case 'UK':
+        return 'green';
+      case 'USA':
+        return 'blue';
+      case 'HK':
+        return 'red';
+      default:
+        return 'black';
+    }
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-team',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamComponent implements OnInit {
 
-  constructor() { }
+  s:string | any;
+  /**
+   * any: It is a built-in data type in TypeScript 
+  which helps in describing the type of variable which we are unsure of while writing the code. *
+  **/
+  users: any;
+  constructor(private data:DataService) { }
 
   ngOnInit(): void {
+    this.s=this.data.helloService();
+    
+    this.data.getUsers().subscribe(data => {
+      this.users = data
+      console.log(this.users);
+    }
+  );
   }
 
 }

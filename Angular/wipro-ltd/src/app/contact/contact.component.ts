@@ -11,6 +11,17 @@ export class ContactComponent implements OnInit {
   messageForm: FormGroup | any; // chk & validate for a group of form controls
   submitted = false;  //flag for successful form submission
   success = false;   // flag for sucessful form validation
+  
+  title="Angular Pipes Demo";
+ 
+  salary=20000;
+  
+  todaydate = new Date();  
+ 
+  jsonval = {name: 'Alex', age: '25', address:{a1: 'Paris', a2: 'France'}}; 
+   
+  months = ['Jan', 'Feb', 'Mar', 'April', 'May', 'Jun',  
+    'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 
   constructor(private formBuilder: FormBuilder) { }
 
