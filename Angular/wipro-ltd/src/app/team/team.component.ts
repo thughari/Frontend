@@ -14,6 +14,10 @@ export class TeamComponent implements OnInit {
   which helps in describing the type of variable which we are unsure of while writing the code. *
   **/
   users: any;
+
+  Account:any=[];
+  employeeId:number=0;
+
   constructor(private data:DataService) { }
 
   ngOnInit(): void {
@@ -22,8 +26,15 @@ export class TeamComponent implements OnInit {
     this.data.getUsers().subscribe(data => {
       this.users = data
       console.log(this.users);
-    }
-  );
+      }
+    );
+  }
+
+  getAccounts()
+  {
+    return this.data.getAccounts(this.employeeId).subscribe((d: {}) => {
+      this.Account=d;
+    })
   }
 
 }
